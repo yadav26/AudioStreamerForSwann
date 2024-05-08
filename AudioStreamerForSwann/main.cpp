@@ -20,7 +20,6 @@ int main()
         }
     );
     thAudio.join();
-    //Fix: termination crash - anshul 
     return 0;
 }
 
