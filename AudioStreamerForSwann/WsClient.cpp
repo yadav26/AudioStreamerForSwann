@@ -12,6 +12,7 @@
 #endif
 #include <pthread.h>
 
+#include <string>
 static int interrupted;
 
 /* one of these created for each message */
@@ -279,7 +280,8 @@ sigint_handler(int sig)
 	interrupted = 1;
 }
 
-int StartConnection(int argc, const char** argv)
+//int StartConnection(int argc, const char** argv)
+int StartConnection(std::string wssip)
 {
 	struct lws_context_creation_info info;
 	struct lws_context* context;
@@ -294,8 +296,8 @@ int StartConnection(int argc, const char** argv)
 
 	signal(SIGINT, sigint_handler);
 
-	if ((p = lws_cmdline_option(argc, argv, "-d")))
-		logs = atoi(p);
+	//if ((p = lws_cmdline_option(argc, argv, "-d")))
+	//	logs = atoi(p);
 
 	lws_set_log_level(logs, NULL);
 	lwsl_user("LWS minimal ws client tx\n");
