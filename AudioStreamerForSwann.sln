@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AudioStreamerForSwann", "AudioStreamerForSwann\AudioStreamerForSwann.vcxproj", "{70BC082C-42C6-4128-8CEF-032F4D99078D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70BC082C-42C6-4128-8CEF-032F4D99078D}.Debug|x64.ActiveCfg = Debug|x64
+		{70BC082C-42C6-4128-8CEF-032F4D99078D}.Debug|x64.Build.0 = Debug|x64
+		{70BC082C-42C6-4128-8CEF-032F4D99078D}.Debug|x86.ActiveCfg = Debug|Win32
+		{70BC082C-42C6-4128-8CEF-032F4D99078D}.Debug|x86.Build.0 = Debug|Win32
+		{70BC082C-42C6-4128-8CEF-032F4D99078D}.Release|x64.ActiveCfg = Release|x64
+		{70BC082C-42C6-4128-8CEF-032F4D99078D}.Release|x64.Build.0 = Release|x64
+		{70BC082C-42C6-4128-8CEF-032F4D99078D}.Release|x86.ActiveCfg = Release|Win32
+		{70BC082C-42C6-4128-8CEF-032F4D99078D}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {741CBBCA-B007-42F6-80E7-586DACF6D25B}
+	EndGlobalSection
+EndGlobal
