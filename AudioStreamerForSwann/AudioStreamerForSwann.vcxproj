@@ -133,13 +133,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="easywsclient.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="WaveRecorder.cpp" />
-    <ClCompile Include="WsClient.cpp" />
+    <ClCompile Include="WsClientEasy.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="easywsclient.hpp" />
     <ClInclude Include="WaveRecorder.h" />
     <ClInclude Include="WsClient.h" />
+    <ClInclude Include="WsClientEasy.h" />
     <ClInclude Include="WsClientInterface.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

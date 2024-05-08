@@ -21,7 +21,10 @@
     <ClCompile Include="WaveRecorder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WsClient.cpp">
+    <ClCompile Include="easywsclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WsClientEasy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -33,6 +36,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WsClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="easywsclient.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WsClientEasy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

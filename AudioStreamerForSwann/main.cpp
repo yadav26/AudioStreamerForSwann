@@ -4,22 +4,13 @@
 //
 
 #include "WaveRecorder.h"
-
-extern int StartConnection(std::string);
+#include "WsClientEasy.h"
 
 std::atomic_bool States(false);
 
 int main()
 {
-    int port = 8765;
-    std::string wsserverip = "wss://3.25.140.218:8765";
-
-    std::thread th([&]() {
-        //here it should establish wss client connection
-        StartConnection(wsserverip);
-        }
-    );
-
+    auto& ws = WsClientEasy::GetInstance();
 
     std::thread thAudio([&]() {
             //below we will get the audio buffer recorded into file if 
@@ -29,8 +20,6 @@ int main()
         }
     );
     thAudio.join();
-    th.join();
-
     //Fix: termination crash - anshul 
     return 0;
 }
