@@ -107,11 +107,13 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>C:/Users/ya934/source/repos/AudioStreamerForSwann/3rdParty/libwebsockets/include;C:/Users/ya934/source/repos/AudioStreamerForSwann/3rdParty/libwebsockets/debug</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\ya934\source\repos\AudioStreamerForSwann\3rdParty\libwebsockets\debug\bin\Debug;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\ya934\source\repos\AudioStreamerForSwann\3rdParty\libwebsockets\debug\lib\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);websockets_static.lib;ws2_32.lib;userenv.lib;psapi.lib;iphlpapi.lib;crypt32.lib;C:\Program Files\OpenSSL-Win64\lib\VC\libssl64MDd.lib;C:\Program Files\OpenSSL-Win64\lib\VC\libcrypto64MDd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -133,6 +135,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="WaveRecorder.cpp" />
+    <ClCompile Include="WsClient.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="WaveRecorder.h" />
