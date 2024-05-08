@@ -11,6 +11,7 @@
 #include <iostream>
 
 #include "WsClientInterface.h"
+#include <cassert>
 
 enum class States{
     DISCONNECTED,
@@ -58,6 +59,8 @@ void WaveRecorder::start() {
         //  Once we start recording, queued buffers will get filled with audio data
         waveInAddBuffer(wi, &headers[i], sizeof(headers[i]));
     }
+
+    assert(wi != nullptr);
 
     // In this example, I'm just going to dump the audio data to a binary file
     std::ofstream outfile("my_recorded_audio.wav", std::ios_base::out | std::ios_base::binary);
