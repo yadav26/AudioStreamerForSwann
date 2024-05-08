@@ -280,6 +280,9 @@ sigint_handler(int sig)
 	interrupted = 1;
 }
 
+#include <atomic>
+extern std::atomic<bool> States;
+
 //int StartConnection(int argc, const char** argv)
 int StartConnection(std::string wssip)
 {
@@ -323,6 +326,12 @@ int StartConnection(std::string wssip)
 
 	while (n >= 0 && !interrupted)
 		n = lws_service(context, 0);
+
+	// ONCE SUCCESSFUL CONNECTED
+	//change state to States
+
+	States = true;
+
 
 	lws_context_destroy(context);
 	lwsl_user("Completed\n");

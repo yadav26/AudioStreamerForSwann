@@ -29,5 +29,11 @@
     <ClInclude Include="WaveRecorder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="WsClientInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WsClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

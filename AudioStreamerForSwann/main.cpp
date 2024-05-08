@@ -7,6 +7,8 @@
 
 extern int StartConnection(std::string);
 
+std::atomic_bool States(false);
+
 int main()
 {
     int port = 8765;

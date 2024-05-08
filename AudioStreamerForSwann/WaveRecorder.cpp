@@ -10,6 +10,15 @@
 #include <fstream>
 #include <iostream>
 
+#include "WsClientInterface.h"
+
+enum class States{
+    DISCONNECTED,
+    CONNECTED
+};
+
+extern std::atomic_bool States;
+
 void WaveRecorder::start() {
     // Fill the WAVEFORMATEX struct to indicate the format of our recorded audio
    //   For this example we'll use "CD quality", ie:  44100 Hz, stereo, 16-bit
@@ -68,8 +77,11 @@ void WaveRecorder::start() {
         {
             if (h.dwFlags & WHDR_DONE)           // is this header done?
             {
-                // if yes, dump it to our file
-                outfile.write(h.lpData, h.dwBufferLength);
+
+                if (!States )
+                    outfile.write(h.lpData, h.dwBufferLength);
+                else
+                    SendBufferToWSServer((uint8_t*)h.lpData, (int)h.dwBufferLength);
 
                 // then re-add it to the queue
                 h.dwFlags = 0;          // clear the 'done' flag
